@@ -23,7 +23,7 @@ task Clean {
 }
 
 task Compile{
-	use "14.0" MSBuild
+	#use '14.0' MSBuild
 	$projects |
 		ForEach-Object {
 			if($_.IsWebProject)
@@ -53,8 +53,8 @@ task Test {
 			$xunitPath = Get-PackagePath "xunit.runner.console" $($_.Directory)
 			if($xunitPath -eq $null){
 				return
-			} 	
-			$xunitRunner = "$xunitPath\tools\xunit.console.exe"
+			}
+			$xunitRunner = "$xunitPath\tools\net452\xunit.console.exe"
 			exec { & $xunitRunner $absoluteOutputDirectory\$($_.Name)\$($_.Name).dll `
 								  -xml "$absoluteOutputDirectory\xunit_$($_.Name).xml" `
 								  -html "$absoluteOutputDirectory\xunit_$($_.Name).html" `
@@ -132,4 +132,5 @@ task Deploy{
 }
 
 task dev clean, compile, test, pack
-task ci dev, push, release, deploy
+task ci dev, push
+#, release, deploy

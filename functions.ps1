@@ -1,9 +1,9 @@
 function Get-SolutionProjects
 {
-	#Add-Type -Path (${env:ProgramFiles(x86)} + '\Reference Assemblies\Microsoft\MSBuild\v14.0\')
-	Add-Type -Path (${env:ProgramFiles(x86)} + '\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\')
-	
-	$solutionFile = (Get-ChildItem('*.sln')).FullName | Select -First 1
+	#Add-Type -Path (${env:ProgramFiles(x86)} + '\Reference Assemblies\Microsoft\MSBuild\v14.0\Microsoft.Build.dll')
+	Add-Type -Path (${env:ProgramFiles(x86)} + '\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\Microsoft.Build.dll')
+
+	$solutionFile = (Get-ChildItem('*.sln')).FullName | Select -First 1	
 	$solution = [Microsoft.Build.Construction.SolutionFile] $solutionFile
 	
 	return $solution.ProjectsInOrder | 
@@ -17,7 +17,7 @@ function Get-SolutionProjects
 			IsWebProject = $isWebProject;
 			PackageId = $_.ProjectName -replace "\.", "-";
         }
-    }	
+    }
 }
 
 function Get-PackagePath($packageId, $projectPath) 
