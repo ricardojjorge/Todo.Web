@@ -23,7 +23,7 @@ task Clean {
 }
 
 task Compile{
-	#use '14.0' MSBuild
+	use '14.0' MSBuild
 	$projects |
 		ForEach-Object {
 			if($_.IsWebProject)
