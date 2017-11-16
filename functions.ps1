@@ -1,6 +1,7 @@
 function Get-SolutionProjects
 {
-	Add-Type -Path (${env:ProgramFiles(x86)} + '\Reference Assemblies\Microsoft\MSBuild\v14.0\Microsoft.Build.dll')
+	#Add-Type -Path (${env:ProgramFiles(x86)} + '\Reference Assemblies\Microsoft\MSBuild\v14.0\	')
+	Add-Type -Path (${env:ProgramFiles(x86)} + '\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\	')
 	
 	$solutionFile = (Get-ChildItem('*.sln')).FullName | Select -First 1
 	$solution = [Microsoft.Build.Construction.SolutionFile] $solutionFile
