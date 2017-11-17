@@ -15,7 +15,7 @@ function Get-SolutionProjects
 			Name = $_.ProjectName;
 			Directory = "$(Split-Path -Path $_.AbsolutePath -Resolve)";
 			IsWebProject = $isWebProject;
-			PackageId = $_.ProjectName #-replace "\.", "-";
+			PackageId = $_.ProjectName -replace "\.", "-";
         }
     }
 }
