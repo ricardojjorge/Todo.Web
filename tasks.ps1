@@ -5,7 +5,7 @@ param(
 
 $absoluteOutputDirectory= "$((Get-Location).Path)\$outputDirectory"
 $projects = Get-SolutionProjects
-$env_octopusDeployServer = "http://localhost/"
+$env_octopusDeployServer = "http://localhost"
 $env_octopusDeployApiKey = "API-V0WHK5PKYUGQ6GFGJ966YISSQAY"
 $env_environment = "QA"
 
