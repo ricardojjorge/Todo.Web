@@ -38,9 +38,9 @@ task Compile{
 				Write-Host "$($_.Path) /t:build /p:Configuration=$configuration /p:OutDir=$outDir /p:WebProjectOutputDir=$webOutDir `
 										 /nologo /p:DebugType=None /p:Platform=AnyCpu /verbosity:quiet"
 
-				exec {MSBuild $($_.Path) /p:Configuration=$configuration /p:OutDir=$outDir /p:WebProjectOutputDir=$webOutDir }
-				#exec {MSBuild $($_.Path) /p:Configuration=$configuration /p:OutDir=$outDir /p:WebProjectOutputDir=$webOutDir `
-				#						 /nologo /p:DebugType=None /p:Platform=AnyCpu /verbosity:quiet }
+				
+				exec {MSBuild $($_.Path) /p:Configuration=$configuration /p:OutDir=$outDir /p:WebProjectOutputDir=$webOutDir `
+										 /nologo /p:DebugType=None /p:Platform=AnyCpu /verbosity:quiet }
 			} else
 			{
 				$outDir = "$absoluteOutputDirectory\$($_.Name)"	
@@ -140,7 +140,5 @@ task Deploy{
 		}
 }
 
-task dev clean, compile
-#, test, pack
-task ci dev
-#, push, release, deploy
+task dev clean, compile, test, pack
+task ci dev, push, release, deploy
