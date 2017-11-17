@@ -90,7 +90,9 @@
     <Content Include="Scripts\model.js" />
     <Content Include="Scripts\ramda.js" />
     <Content Include="Scripts\view.js" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\Site.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery.js" />
     <Content Include="Web.config">
