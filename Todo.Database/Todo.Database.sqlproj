@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{e0e53659-69ea-4a89-824d-14707de8e9e4}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql120DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -126,5 +126,6 @@
     <Build Include="dbo\Stored Procedures\GetNuGetPackages.sql" />
     <Build Include="dbo\Stored Procedures\GetNextKeyBlock.sql" />
     <Build Include="dbo\Stored Procedures\EventSourceDeployments.sql" />
+    <Build Include="dbo\Tables\TEMP.sql" />
   </ItemGroup>
 </Project>

@@ -9,3 +9,5 @@ Todo.Web.Tests/obj/
 *.user
 *.cache
 artifacts/
+/Todo.Database/bin/Debug
+/Todo.Database/obj/Debug
