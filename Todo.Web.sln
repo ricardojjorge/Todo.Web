@@ -7,10 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web", "Todo.Web\Todo.W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web.Tests", "Todo.Web.Tests\Todo.Web.Tests.csproj", "{D6A20AB7-3F90-4FC1-9B50-41FA7C541053}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8BAF92A7-1D51-4318-984C-BCC41907314A}"
-	ProjectSection(SolutionItems) = preProject
-		release.txt = release.txt
-	EndProjectSection
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Todo.Database", "Todo.Database\Todo.Database.sqlproj", "{E0E53659-69EA-4A89-824D-14707DE8E9E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +23,12 @@ Global
 		{D6A20AB7-3F90-4FC1-9B50-41FA7C541053}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6A20AB7-3F90-4FC1-9B50-41FA7C541053}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6A20AB7-3F90-4FC1-9B50-41FA7C541053}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

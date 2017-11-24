@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[Feed] (
+    [Id]       NVARCHAR (210) NOT NULL,
+    [Name]     NVARCHAR (200) NOT NULL,
+    [FeedUri]  NVARCHAR (512) NOT NULL,
+    [JSON]     NVARCHAR (MAX) NOT NULL,
+    [FeedType] NVARCHAR (50)  NOT NULL,
+    CONSTRAINT [PK_Feed_Id] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UQ_FeedNameUnique] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+

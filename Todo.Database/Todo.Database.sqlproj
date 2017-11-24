@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Todo.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{e0e53659-69ea-4a89-824d-14707de8e9e4}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Todo.Database</RootNamespace>
+    <AssemblyName>Todo.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\VariableSet.sql" />
+    <Build Include="dbo\Tables\UserRole.sql" />
+    <Build Include="dbo\Tables\User.sql" />
+    <Build Include="dbo\Tables\TenantVariable.sql" />
+    <Build Include="dbo\Tables\Tenant.sql" />
+    <Build Include="dbo\Tables\Team.sql" />
+    <Build Include="dbo\Tables\TagSet.sql" />
+    <Build Include="dbo\Tables\Subscription.sql" />
+    <Build Include="dbo\Tables\ServerTask.sql" />
+    <Build Include="dbo\Tables\SchemaVersions.sql" />
+    <Build Include="dbo\Tables\Release.sql" />
+    <Build Include="dbo\Tables\Proxy.sql" />
+    <Build Include="dbo\Tables\ProjectTrigger.sql" />
+    <Build Include="dbo\Tables\ProjectGroup.sql" />
+    <Build Include="dbo\Tables\Project.sql" />
+    <Build Include="dbo\Tables\OctopusServerNode.sql" />
+    <Build Include="dbo\Tables\NuGetPackage.sql" />
+    <Build Include="dbo\Tables\Mutex.sql" />
+    <Build Include="dbo\Tables\MachinePolicy.sql" />
+    <Build Include="dbo\Tables\Machine.sql" />
+    <Build Include="dbo\Tables\Lifecycle.sql" />
+    <Build Include="dbo\Tables\LibraryVariableSet.sql" />
+    <Build Include="dbo\Tables\KeyAllocation.sql" />
+    <Build Include="dbo\Tables\Invitation.sql" />
+    <Build Include="dbo\Tables\Interruption.sql" />
+    <Build Include="dbo\Tables\Feed.sql" />
+    <Build Include="dbo\Tables\ExtensionConfiguration.sql" />
+    <Build Include="dbo\Tables\EventRelatedDocument.sql" />
+    <Build Include="dbo\Tables\Event.sql" />
+    <Build Include="dbo\Tables\DeploymentRelatedMachine.sql" />
+    <Build Include="dbo\Tables\DeploymentProcess.sql" />
+    <Build Include="dbo\Tables\DeploymentHistory.sql" />
+    <Build Include="dbo\Tables\DeploymentEnvironment.sql" />
+    <Build Include="dbo\Tables\Deployment.sql" />
+    <Build Include="dbo\Tables\DashboardConfiguration.sql" />
+    <Build Include="dbo\Tables\Configuration.sql" />
+    <Build Include="dbo\Tables\CommunityActionTemplate.sql" />
+    <Build Include="dbo\Tables\Channel.sql" />
+    <Build Include="dbo\Tables\Certificate.sql" />
+    <Build Include="dbo\Tables\Artifact.sql" />
+    <Build Include="dbo\Tables\ApiKey.sql" />
+    <Build Include="dbo\Tables\ActionTemplateVersion.sql" />
+    <Build Include="dbo\Tables\ActionTemplate.sql" />
+    <Build Include="dbo\Tables\Account.sql" />
+    <Build Include="dbo\Views\TenantProject.sql" />
+    <Build Include="dbo\Views\ReleaseCurrentDashboard.sql" />
+    <Build Include="dbo\Views\Release_WithDeploymentProcess.sql" />
+    <Build Include="dbo\Views\Release_LatestByProjectChannel.sql" />
+    <Build Include="dbo\Views\ProjectCurrentDashboard.sql" />
+    <Build Include="dbo\Views\MultiTenancyDashboard.sql" />
+    <Build Include="dbo\Views\IdsInUse.sql" />
+    <Build Include="dbo\Views\DeploymentSummary.sql" />
+    <Build Include="dbo\Views\Dashboard.sql" />
+    <Build Include="Security\NT AUTHORITY_SYSTEM.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Functions\fnSplitReferenceCollectionAsTable.sql" />
+    <Build Include="dbo\Functions\fnAreTagRulesSatisfied.sql" />
+    <Build Include="dbo\Stored Procedures\UpdateDeploymentHistory.sql" />
+    <Build Include="dbo\Stored Procedures\GetNuGetPackages.sql" />
+    <Build Include="dbo\Stored Procedures\GetNextKeyBlock.sql" />
+    <Build Include="dbo\Stored Procedures\EventSourceDeployments.sql" />
+  </ItemGroup>
+</Project>

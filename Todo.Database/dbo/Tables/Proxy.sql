@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Proxy] (
+    [Id]   NVARCHAR (50)  NOT NULL,
+    [Name] NVARCHAR (200) NOT NULL,
+    [JSON] NVARCHAR (MAX) NOT NULL,
+    CONSTRAINT [PK_Proxy_Id] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [UQ_ProxyNameUnique] UNIQUE NONCLUSTERED ([Name] ASC)
+);
+
