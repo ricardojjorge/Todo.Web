@@ -1,13 +1,30 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web", "Todo.Web\Todo.Web.csproj", "{0BF22B65-4102-4A3B-AF7F-E0A09C8F98FA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Web.Tests", "Todo.Web.Tests\Todo.Web.Tests.csproj", "{D6A20AB7-3F90-4FC1-9B50-41FA7C541053}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Todo.Database", "Todo.Database\Todo.Database.sqlproj", "{E0E53659-69EA-4A89-824D-14707DE8E9E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Lib", "Todo.Lib\Todo.Lib.csproj", "{28663363-3745-4994-9962-2B2F0C5614A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4832753C-6DC9-48D9-B3B1-9DDCBB510F18}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+		build.ps1 = build.ps1
+		GitVersion.yml = GitVersion.yml
+		build\paths.cake = build\paths.cake
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{25DFE3CC-C137-48CC-963D-081B7A7312A1}"
+	ProjectSection(SolutionItems) = preProject
+		build\paths.cake = build\paths.cake
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{E6EA7F7C-3B55-4412-B588-CE67AEA1F462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,9 +46,17 @@ Global
 		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0E53659-69EA-4A89-824D-14707DE8E9E4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{28663363-3745-4994-9962-2B2F0C5614A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28663363-3745-4994-9962-2B2F0C5614A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28663363-3745-4994-9962-2B2F0C5614A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28663363-3745-4994-9962-2B2F0C5614A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25DFE3CC-C137-48CC-963D-081B7A7312A1} = {4832753C-6DC9-48D9-B3B1-9DDCBB510F18}
+		{E6EA7F7C-3B55-4412-B588-CE67AEA1F462} = {4832753C-6DC9-48D9-B3B1-9DDCBB510F18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D97F9B98-0896-4427-9B94-C44BDF69E0A6}
