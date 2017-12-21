@@ -11,3 +11,8 @@ Todo.Web.Tests/obj/
 artifacts/
 /Todo.Database/bin/Debug
 /Todo.Database/obj/Debug
+/coverage
+/Todo.Database/obj/Release
+/Todo.Database/bin/Release
+/Todo.Lib/bin
+/Todo.Lib/obj
