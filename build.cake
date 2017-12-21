@@ -70,10 +70,10 @@ Task("Version")
 	.Does(()=>
 {
 	var version = GitVersion();
-	/*Information($"Calculated semantic version {version.SemVer}");
+	Information($"Calculated semantic version {version.SemVer}");
 
-	//packageVersion = version.NuGetVersion;
-	//Information($"Corresponding package version {packageVersion}");
+	packageVersion = version.NuGetVersion;
+	Information($"Corresponding package version {packageVersion}");
 
 	if(!BuildSystem.IsLocalBuild)
 	{
@@ -82,7 +82,7 @@ Task("Version")
 			OutputType = GitVersionOutput.BuildServer,
 			UpdateAssemblyInfo = true
 		});
-	}*/
+	}
 });
 
 RunTarget(target);
