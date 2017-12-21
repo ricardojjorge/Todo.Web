@@ -15,8 +15,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
 		build.ps1 = build.ps1
+		GitVersion.yml = GitVersion.yml
 		build\paths.cake = build\paths.cake
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{25DFE3CC-C137-48CC-963D-081B7A7312A1}"
+	ProjectSection(SolutionItems) = preProject
+		build\paths.cake = build\paths.cake
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{E6EA7F7C-3B55-4412-B588-CE67AEA1F462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{25DFE3CC-C137-48CC-963D-081B7A7312A1} = {4832753C-6DC9-48D9-B3B1-9DDCBB510F18}
+		{E6EA7F7C-3B55-4412-B588-CE67AEA1F462} = {4832753C-6DC9-48D9-B3B1-9DDCBB510F18}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D97F9B98-0896-4427-9B94-C44BDF69E0A6}
